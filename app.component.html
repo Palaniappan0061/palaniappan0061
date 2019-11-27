@@ -1,0 +1,23 @@
+
+ 
+
+<h1>{{title}}</h1>
+                <table class= "table" width=300px border=10px>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th width=500px>Quantity</th>
+                      
+                    </tr>
+                    <tr *ngFor="let item of mobiles; let i = index" [hidden]="item.Quantity<1"  [ngStyle]="{'background-color':item.Quantity>=5 ? 'red' : 'white'}">
+                        <td>{{i + 1}}</td>
+                        <td>{{item.Name}}</td>
+                        <button (click)="DecQty(i)">-</button>
+                        <td>{{item.Quantity}}</td> 
+                        <button (click)="OnQty(i)" >+</button>
+                       
+                    </tr>
+                </table>
+
+
+
