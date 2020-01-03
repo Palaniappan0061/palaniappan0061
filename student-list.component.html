@@ -1,0 +1,39 @@
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+            Student Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Mobile
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            DOB
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of studentList; index as i">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.email}}</td>
+            <td>{{ item.mobile}}</td>
+            <td>{{ item.gender}}</td>
+            <td>{{ item.dob}}</td>
+            <!-- <td>
+              <a class="btn btn-sm btn-primary shadow mr-3" [routerLink]="['/edit-order',order.id]">Edit</a>
+              <a class="btn btn-sm btn-primary shadow mr-3" [routerLink]="['/view-order',order.id]">View</a>
+              <button class="btn btn-sm btn-danger shadow" (click)="deleteOrder(order.id,i)">Delete</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>
